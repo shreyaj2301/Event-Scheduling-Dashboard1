@@ -1,0 +1,90 @@
+body {
+  background-color: #d2d5e0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: #4c4f5f6e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+h1, h2 {
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.date-cell {
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  font-size: 16px;
+}
+
+.date-cell:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+.btn-primary {
+  background: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: background 0.3s;
+  color: #fff;
+  font-size: 16px;
+}
+
+.btn-primary:hover {
+  background: #0a141f;
+}
+
+@media (max-width: 768px) {
+  .calendar {
+      grid-template-columns: repeat(5, 1fr);
+  }
+  .date-cell {
+      padding: 15px;
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .calendar {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 5px;
+  }
+  .date-cell {
+      padding: 10px;
+      font-size: 12px;
+  }
+  h1, h2 {
+      font-size: 20px;
+  }
+  .btn-primary {
+      font-size: 14px;
+  }
+  table th, table td {
+      font-size: 12px;
+  }
+}
